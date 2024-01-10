@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+}
+.invest{
+    background-color: #353535;
+    width:100%;
+}
+.invest img{
+    width:100%;
+    margin-top:50px;
+    position:relative;
+    height: 500px;
+}
+.invest h2{
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    color:white;
+}
+.invest p{
+    margin-top: 30px;
+}
+
+.invest .press{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+.invest .press img{
+    width: 100%;
+    position: absolute;
+}
+.invest .press .box{
+    margin-top: 15%;
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    border: none;
+    height: 300px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    backdrop-filter: blur(20px) ;width:300px;
+    
+}
+.invest .press .box p{
+    padding: 1rem;
+    color:#353535;
+}
