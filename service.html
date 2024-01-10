@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STP's car services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+@media(max-width:500px){
+    .protection{
+        width:300px;
+    }
+    body{
+    font-size: 70%;
+    }
+}
+body{
+    color:#fff;
+    font-size: 95%;
+    text-align: center;
+    background: url(image-car.jpg)no-repeat;
+    background-size: cover;
+}
+.container{
+    justify-content:space-evenly;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    position:relative;
+    margin-top: 5%;
+}
+h1{
+    margin-top: 50px;
+}
+ h1::after{
+    position:absolute;
+    left:38%;
+    content: '';
+    top:95px;
+    width: 18%;
+    height: 3px;
+    margin-left: 34px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scaleX(1);
+    transition: transform 0.2s;
+    transform-origin: right;
+}
+.protection{
+    height:350px;
+    width: 250px;
+    border:2px solid rgb(82, 80, 80);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    background:transparent;
+    backdrop-filter: blur(25px);margin-bottom: 20px;
+}
+.protection h2{
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+    color:rgb(62, 58, 58)
+}
+
+.protection h2::after{
+    position:absolute;
+    left: 0;
+    content: '';
+    top:45px;
+    width: 70%;
+    height: 3px;
+    margin-left: 34px;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    transform-origin: right;
+}
+.protection h2:hover::after{
+    transform: scaleX(1);
+}
+
+.protection ul li{ 
+    list-style: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.protection ul li a{
+    text-decoration: none;
+    color:white;
+    font-weight: 400;
+    line-height: 2px;
+}
+.protection ul li :hover{
+    color: blue;
+}
+</style>
+
+</head>
+<body>
+    <h1>STP's car renter services</h1>
+    <div class="container">
+    <div class="protection">
+        <h2>protection &amp; extras</h2>
+        <ul>
+            <li><a href="#">protection</a></li>
+            <li><a href="#">free travel app</a></li>
+            <li><a href="#">extras and add ones</a></li>
+            <li><a href="#">carbon sequestration</a></li>
+        </ul>
+    </div>
+
+    <div class="protection">
+        <h2>special vehicles</h2>
+        <ul>
+            <li><a href="#">motorhomes</a></li>
+            <li><a href="#">popular cars</a></li>
+            <li><a href="#">luxury cars</a></li>
+            <li><a href="#">campers</a></li>
+        </ul>
+    </div>
+
+    <div class="protection">
+        <h2>business center</h2>
+        <ul>
+            <li><a href="#">business solutions</a></li>
+            <li><a href="#">quality management</a></li>
+            <li><a href="#">deals and discount</a></li>
+            <li><a href="#">carbon sequestration</a></li>
+        </ul>
+    </div>
+
+    </div>
+    
+</body>
+</html>
