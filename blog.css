@@ -1,0 +1,81 @@
+*{
+    background-color:rgb(100, 219, 243);
+    margin-left: 20px;
+}
+h1{
+    color:rgb(187, 48, 48);
+    font: weight 900px;;
+    font-size: 40px;
+    font-style:segoi ui tahomai;
+}
+button a{
+    text-decoration: none;
+}
+h3{
+    color:rgb(187, 48, 48);
+    font-style:segoi ui tahomai ;
+}
+button{
+    height: 40px;
+    width:100px;
+    border-radius: 20px;
+    border: navy;
+}
+p,a{
+    color:rgb(14, 14, 235);
+    text-decoration: none;
+}
+#login{
+    color:rgb(226, 46, 144);
+    background-color: #e7f2f8;
+}
+#signup{
+    color:rgb(226, 46, 144);
+    background-color:#e7f2f8;
+}
+.top{
+    background-color:#e7f2f8; 
+    color: rgb(226, 46, 144);
+}
+#list{
+    color:rgb(226, 46, 144);
+}
+.upvote{
+    color:rgb(227, 45, 45);
+    background-color: rgb(248, 166, 166);
+}
+.answer{
+    color:#3d5506;
+    background-color:#b1d470 ;
+}
+#login:hover{
+    color:#3d5506;
+    background-color: rgb(179, 220, 96);
+}
+#signup:hover{
+    color:#3d5506;
+    background-color: rgb(179, 220, 96);
+}
+p,a:hover{
+    color: red;
+    
+}
+.upvote:active{
+    color: midnightblue;
+    background-color: skyblue;
+}
+.answer:active{
+    color: palevioletred;
+    background-color: paleturquoise;
+}
+#list:hover{
+    color: #3d5506;
+    list-style: disc;
+
+}
+.top:hover{
+    display: none;
+}
+h3::after{
+    color:black;
+}
