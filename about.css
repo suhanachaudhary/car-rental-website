@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    color:#fff;
+}
+.main{
+    margin-top:0;
+    background-color: #323131;
+}
+.main h2{
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+}
+.main .container{
+    color:#fff;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.main ul li{
+    margin-left: 100px;
+
+}
+.main .line{
+    height: 100px;
+    border: none;
+}
+.main .line .draw{
+    height: 4px;
+    width: 95%;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-top: 100px;
+}
+.main .line p{
+    text-align: center;
+    margin-top: 5px;
+}
