@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STP's car rental</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"href="video.css">
+</head>
+<body>
+    <div class="container">
+        <h2>watch the videos</h2>
+        <div class="row">
+            <div class="col">
+                <div class="feature-img">
+                    <img src="img3"style="height:250px;width:420px">
+                    <img src="player-icon.png" class="play-btn" onclick="playVideo('vid2.mp2')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="img1.png"style="height:100%">
+                        <img src="player-icon.png" class="play-btn" onclick="playVideo('vid2.mp4')">
+                    </div>  
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quo, sit  </p>
+                </div>
+ 
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="Rent-Car.jpg"style="height:100%">
+                        <img src="player-icon.png" class="play-btn" onclick="playVideo('vid2.mp4')">
+                    </div>   
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quo, sit </p>
+                </div>
+
+                <div class="small-img-row">
+                    <div class="small-img">
+                        <img src="img2.jpg"style="height:100%">
+                        <img src="player-icon.png" class="play-btn" onclick="playVideo('vid2.mp4')">
+                    </div>    
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quo, sit </p>
+                </div> 
+
+            </div>
+        </div>
+    </div>
+
+    <div class="video-player" id="videoPlayer">
+        <video width="100%"" controls autoplay id="promo-video">
+            <source src="vid2.mp4" type="video/mp4">
+        </video>
+        <img src="close-btn.png"class="close-btn" onclick="stopvideo()">
+    </div>
+    <script src="video.js"></script>
+</body>
+</html>

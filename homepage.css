@@ -11,7 +11,7 @@
     height: 100vh;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.75)),url(car-image.jpg);
+    background-image: linear-gradient(rgba(70, 160, 205, 0.7),rgba(0,0,0,0.75)),url(car-image.jpg);
 }
 .navbar{
     width:85%;

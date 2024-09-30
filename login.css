@@ -5,15 +5,16 @@
     box-sizing: border-box;
 }
 body{
-    justify-content: center;
     align-items: center;
-    display: flex;
-    background: url(13.jpg)no-repeat;
-    min-height: 100vh;
+    background: url(backgroung.jpg)no-repeat;
     background-position: center;
     background-size: cover;
     text-transform: capitalize;
-
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 header{
     position: fixed;
@@ -24,7 +25,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     z-index: 99;
+
+    .navbar{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 }
 .logo{
     font-size: 2em;
@@ -75,7 +84,7 @@ header{
     transition: .2s linear;
 }
 .wrapper{
-    position: relative;
+    position: fixed;
     height: 440px;
     width: 400px;
     background:transparent;
@@ -84,11 +93,13 @@ header{
     border: 2px solid rgba(255,255,255,0.5);
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-items: center !important;
     overflow: hidden;
     transform: scale(0);
     transition:transform 0.5s height 0.2s ease;
+    margin-top: 10%;
 }
 .wrapper.active-popup{
     transform: scale(1);
@@ -134,6 +145,8 @@ header{
 .wrapper.active .form-box.register{
     transition: transform 0.18s ease;
     transform: translateX(0);
+}
+.form-box{
 }
 
 .form-box h2{

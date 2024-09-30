@@ -1,6 +1,6 @@
 
 :root{
-    --yellow:#f9ca24;
+    --yellow:#08385b;
 }
 *{   
    font-family: 'Nunito Sans', sans-serif;
@@ -31,7 +31,7 @@ html::-webkit-scrollbar-thumb{
     background: var(--yellow);
 }
 body{
-    background-color: #111;
+    background-color: skyblue;
     overflow-x: hidden;
 }
 .leader{
@@ -46,14 +46,15 @@ body{
 header{
     position:relative;
     height: 100%;
-    width:35rem;
+    width:45rem;
     display: flex;
-    background-color: #1a1a1a;
+    background-color:#52AAf1;
     align-items: center;
     justify-content: center;
     z-index: 1000;
     flex-flow: column;
     text-align: center;
+    margin-top: 30px;
 }
 header .user img{
     width: 17rem;
@@ -85,7 +86,7 @@ header .top ul li a{
     padding: 1rem;
     margin: 1.5rem 0;
     font-size: 2rem;
-    background-color: #333;
+    background-color: skyblue;
     color: #fff;
     border-radius:5rem;
 }

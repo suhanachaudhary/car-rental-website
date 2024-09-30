@@ -10,68 +10,102 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet"href="style.css">
 </head>
+
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-primary">
+<!--    
+booking form php -->
+  <?php
+  session_start();
+  
+  // Check if the user is logged in
+  if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+      echo "<p>You need to log in to access this page. <a href='login.html'>Login here</a>.</p>";
+      exit(); // Stop further execution of the page
+  }
+  ?>
+
+  <!-- booking form php end -->
+
+
+    <nav class="navbar navbar-expand-lg bg-body-primary fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Home</a>
+          <a class="navbar-brand" href="homepage.html">Home</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="services page/service.html">Services</a>
+                <a class="nav-link active" aria-current="page" href="service.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login website/login.html">SignUp</a>
+                <a class="nav-link" href="login.html">SignUp</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login website/login.html">LogIn</a>
+                <a class="nav-link" href="login.html">LogIn</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   company profile
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">investor relations</a></li>
-                  <li><a class="dropdown-item" href="#">leadership</a></li>
+                  <li><a class="dropdown-item" href="investor.html">investor relations</a></li>
+                  <li><a class="dropdown-item" href="leaders.html">leadership</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">website owner</a></li>
+                  <li><a class="dropdown-item" href="leaders.html">website owner</a></li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit"><a href="https://google.com">Search</a></button>
+              <input class="form-control me-2" id="search" type="search" placeholder="Search with title" aria-label="Search" onkeyup="filterCards()" style="width: 300px;" >
             </form>
           </div>
         </div>
       </nav>
+      <br><br><br>
 <div class="tag">
     <h2 class="title">Welcome to STP's Car Renter</h2>
 </div>
 <div class="image">
     <img src="front1.jpg">
-    <div class="booking-form">
-        <form>
-            <label for="location">Location</label>
-            <input type="text"placeholder="enter location"id="location">
-            <label for="start-time">Start-time</label>
-            <input type="number"placeholder="00:00"id="start-time">
-            <label for="end">End-time</label>
-            <input type="number"placeholder="00:00"id="end">
-            <label for="email">Email</label>
-            <input type="text"placeholder="xyz@gmail.com"id="email">
-            <label for="phone">Phone no</label>
-            <input type="number"placeholder="(91)+"id="phone">
-            <button type="submit"><a href="submit page/submit.html">submit</a></button>
-        </form>
+    <div class="booking-form container">
+      <form action="booking.php" method="POST">
+        <div class="col-12">
+          <label for="exampleInputEmail1">Location</label>
+          <input type="text" class="form-control" name="location" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Location, City" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your location with anyone else.</small>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <label for="exampleInputPassword1">Start time</label>
+            <input type="time" class="form-control" name="start" id="exampleInputPassword1" placeholder="Start time" required>
+          </div>
+
+          <div class="col-6">
+            <label for="exampleInputPassword1">End time</label>
+            <input type="time" class="form-control" name="end" id="exampleInputPassword1" placeholder="End time" required>
+          </div>
+        </div>
+
+        <div class="col-12">
+            <label for="exampleInputPassword1">Email</label>
+            <input type="email" class="form-control" name="email" id="exampleInputPassword1" placeholder="Email" required>
+          </div>
+          <div class="col-12">
+            <label for="exampleInputPassword1">Phone Number</label>
+            <input type="text" class="form-control" name="phone" id="exampleInputPassword1" placeholder="Phone" required>
+          </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" style="height: 20px;width:10px !important" required>
+          <label class="form-check-label" for="exampleCheck1">All details is correct!</label>
+        </div>
+        <button type="submit" class="btn btn-primary submit">Submit</button>
+      </form>
     </div>
 </div>
-<div class="main">
+<div class="main container-fluid">
     <h3>Popular cars</h3>
     <div class="card-container">
         <div class="card">
@@ -170,7 +204,7 @@
                                                     <h2>210Rs/hr</h2>
                                                     <button><a href="cars.html">Know more</a></button>
                                                     </div></div>
-     <h4>Expansive Cars</h4>
+     <h4>Expensive Cars</h4>
       <div class="card-container">
           <div class="card">
          <img src="mercidice.jpg"class=card-image>
@@ -299,8 +333,9 @@
    </div>  
    </div>    
    <!-- //....facility.....                                            -->
-<div class="facility">
-  <p>Why choose STP's self driven Cars</p>
+
+   <p>Why choose STP's self driven Cars</p>
+   <div class="facility">
   <div class="card-containers">
   <div class="carders">
   <i class="fa-solid fa-car"></i>
@@ -320,7 +355,7 @@
 </div>
 </div>
 <!-- //footer..................... -->
-<div class="footer">
+<div class="footer container-fluid">
 <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="all_links.html">dropdown</a></li>
@@ -360,7 +395,6 @@ INDONESIA&amp;Self Drive Cars In Jakarta//
 EGYPT&amp;
 Self Drive Cars In Cairo</p>
 <br><br>
-<span style="color:white"><strong>Let's keep in touch</strong></span>
 
 <div class="social_media">
   <h5 style="color:white;">Let's keep in touch</h5>
@@ -371,5 +405,7 @@ Self Drive Cars In Cairo</p>
 </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
-</body>
+    <script src="app.js"></script>
+
+  </body>
 </html>
